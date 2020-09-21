@@ -67,6 +67,7 @@ nav {
     border-style: none;
     border-radius: 0.3rem;
     padding: 0.2rem 1rem; /* top/bottom, right/left */
+    font-size: 2vh;
 }
 
 .bars, .user_plus, .search_responsive, .cart-logo_responsive {
@@ -80,7 +81,7 @@ nav {
     flex-direction: column;
     align-items: center;
     flex-basis: 75vh;
-    background: url(../IMG/book_ecommerce_gradient.png) center/cover; /* background-image, position/size */
+    background: url(../IMg/book_ecommerce_gradient.jpg) center/cover; /* background-image, position/size */
     padding-top: 8vh;
     padding-bottom: 4vh;
     padding-left: 6vh;
@@ -273,7 +274,7 @@ h4, h5, ul, .covertype {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../IMG/book_ecommerce_gradient.png) center/cover; /* background-image, position/size */
+    background: url(../IMG/book_ecommerce_gradient.jpg) center/cover; /* background-image, position/size */
     flex-basis: 40vh; /* establish image's height - viewport */
     margin-top: 5vh;
 }
@@ -478,5 +479,3 @@ small{
         display: none;
     }
 }
-
-
