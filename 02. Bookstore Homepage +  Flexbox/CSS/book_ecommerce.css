@@ -7,10 +7,6 @@ body{
     flex-flow: column nowrap;
 }
 
-.bars {
-    display: none; /* bars will only be displayed in screens max-width: 500px */
-}
-
 li {
     list-style: none; /* remove all lists icon*/
 }
@@ -39,7 +35,7 @@ nav {
     flex: 5 1 auto;
     display: flex;
     justify-content: space-around;
-    font-size: 0.8rem;
+    font-size: 2vh;
 }
 
 .dotted-box {
@@ -52,6 +48,7 @@ nav {
     display: flex;
     justify-content: center;
     font-size: 3.5vh;
+    margin-bottom: 1vh;
 }
 
 .kreative {
@@ -60,7 +57,7 @@ nav {
 
 .button {
     display: flex;
-    align-items: center;
+    margin-bottom: 1vh;
 }
 
 .inside_button {
@@ -70,6 +67,10 @@ nav {
     border-style: none;
     border-radius: 0.3rem;
     padding: 0.2rem 1rem; /* top/bottom, right/left */
+}
+
+.bars, .user_plus, .search_responsive, .cart-logo_responsive {
+    display: none; /* bars will only be displayed in screens max-width: 500px */
 }
 
 /*--------- banner section ---------*/
@@ -87,7 +88,7 @@ nav {
 }
 
 .main_banner {
-    flex: 10 1 auto; /*flex-grow, flex-shrink, flex-basis */
+    flex: 10 1 auto; /* flex-grow, flex-shrink, flex-basis */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,12 +229,12 @@ h4, h5, ul, .covertype {
     line-height: 1.6; /* space between each <p> */ 
 }
 
-.book_star_price li:before { /*change and style categories list icon*/
-    content: "\1F7CA"; /*change and style categories list icon https://www.compart.com/en/unicode*/
-    margin-right: 0.1rem; /* distance between icon and font*/
+.book_star_price li:before { /* change and style categories list icon */
+    content: "\1F7CA"; /* change and style categories list icon https://www.compart.com/en/unicode */
+    margin-right: 0.1rem; /* distance between icon and font */
     color: rgb(255, 208, 0);
     font-size: xx-large; /* change icon size, original dotted circle too small */
-    vertical-align: -15%; /*center icon with fonts*/
+    vertical-align: -15%; /* center icon with fonts */
 }
 
 /*--------- all categories section ---------*/
@@ -257,12 +258,12 @@ h4, h5, ul, .covertype {
     margin-bottom: 1vh; 
 }
 
-.categories_list li:before { /*change and style categories list icon*/
-    content: "\25CC"; /*change and style categories list icon https://www.compart.com/en/unicode*/
-    margin-right: 0.4vw; /* distance between icon and font*/
-    font-size: 6vh; /*change icon size vertical, original dotted circle too small*/
-    font-size: 3vw; /*change icon size horizontal  */ 
-    vertical-align: -0.9vh; /*center icon with fonts*/
+.categories_list li:before { /* change and style categories list icon */
+    content: "\25CC"; /* change and style categories list icon https://www.compart.com/en/unicode */
+    margin-right: 0.4vw; /* distance between icon and font */
+    font-size: 6vh; /* change icon size vertical, original dotted circle too small */
+    font-size: 3vw; /* change icon size horizontal  */ 
+    vertical-align: -0.9vh; /* center icon with fonts */
 }
 
 
@@ -357,6 +358,34 @@ small{
     .all_categories {
         display: none;        
     }
+
+    .off {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 11vh;
+    }
+
+    .responsive_menu_logos {
+        display: flex;
+        padding-bottom: 2vh;
+    }
+
+    .cart-logo_responsive, .search_responsive, .user_plus, .bars {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 2.7vh;
+        margin: 0.5vw 1vw;
+    }
 }
 
 @media all and (max-width: 1050px) {
@@ -370,17 +399,6 @@ small{
 
     .main_banner h1 {
         font-size: 8.5vh;
-    }
-
-    .off {
-        display: none;
-    }
-
-    .bars {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 4vh;
     }
 
     .button_mail {
@@ -427,18 +445,6 @@ small{
         font-size: 1.5vh;
     }
 
-    .off { /* removes navigation items, and displays bars instead */
-        display: none;
-    }
-
-    .bars { /* displays bars, simulating as a possible menu can be open, not made in this project */
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-left: 5vh;
-        font-size: 4vh;
-    }
-
     .button_mail {
         margin-top: 0.5rem;
     }
@@ -449,20 +455,14 @@ small{
 }
 
 @media all and (max-width: 400px) {
+
+    .kreative-logo, .kreative {
+        padding: 0px 0px;
+    }
+
     .savings_banner {
         font-size: 1.5vh;
     } 
-
-    .off {
-        display: none;
-    }
-
-    .bars {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        font-size: 3.5vh;
-    }
 
     .text_mail{
         width: 13rem;
