@@ -80,8 +80,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 75vh;
-    background: url(../IMg/book_ecommerce_gradient.jpg) center/cover; /* background-image, position/size */
+    flex-basis: 75vh; /* establish image's height - viewport */
+    background: url(../IMG/book_ecommerce_gradient.jpg) center/cover; /* background-image, position/size */
     padding-top: 8vh;
     padding-bottom: 4vh;
     padding-left: 6vh;
@@ -99,11 +99,12 @@ nav {
 
 .main_banner h1 {
     margin: 0px;
-    font-family: 'Impact', sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-size: 11vh;
     font-weight: lighter; 
     text-align: center; 
     padding: 0rem 22rem;
+    line-height: 13vh;
 }
 
 .savings_banner {
@@ -230,13 +231,15 @@ h4, h5, ul, .covertype {
     line-height: 1.6; /* space between each <p> */ 
 }
 
-.book_star_price li:before { /* change and style categories list icon */
-    content: "\1F7CA"; /* change and style categories list icon https://www.compart.com/en/unicode */
-    margin-right: 0.1rem; /* distance between icon and font */
+.fa-li { /* Use fa-ul and fa-li to replace default bullets in unordered lists. Font-Awesome. */
     color: rgb(255, 208, 0);
-    font-size: xx-large; /* change icon size, original dotted circle too small */
-    vertical-align: -15%; /* center icon with fonts */
-}
+    font-size: large;
+    padding: 0%;
+  }
+  
+  .fa-ul { /* Use fa-ul and fa-li to replace default bullets in unordered lists. Font-Awesome. */
+    margin-left: 2rem;
+  }
 
 /*--------- all categories section ---------*/
 
@@ -400,6 +403,7 @@ small{
 
     .main_banner h1 {
         font-size: 8.5vh;
+        line-height: 9vh;
     }
 
     .button_mail {
